@@ -4,7 +4,7 @@ set nocompatible
 " Automatic reloading of .vimrc
 
 set shiftwidth=4
-set tabstop=4
+set softtabstop=4
 set expandtab
 
 " Normal Backspace behaviour
