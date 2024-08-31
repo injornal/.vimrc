@@ -28,14 +28,8 @@ set mouse=a
 " Vim-Plug
 call plug#begin()
 
-" List your plugins here
-Plug 'tpope/vim-sensible'
-
 " Status line
 Plug 'itchyny/lightline.vim'
-
-" Syntax checking
-Plug 'dense-analysis/ale'
 
 " Autocompletion & LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -53,29 +47,15 @@ Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
 
 set termguicolors
-" colorscheme catppuccin_macchiato
+colorscheme catppuccin_macchiato
 let g:lightline = {'colorscheme': 'catppuccin_macchiato'}
-
-" Setting up ALE
-let g:ale_linters = {
-\   'cpp': [],
-\   'python': [],
-\}
-
-let g:ale_fixers = {
-\   'python': ['black', 'isort'],
-\   'cpp': ['clang-format'],
-\}
 
 let g:ale_fix_on_save = 1
 let g:ale_c_clangformat_style_option = '{BasedOnStyle: Google, IndentWidth: 4}'
-" let g:ale_lint_on_save = 1
-" let g:ale_completion_enabled = 1
-" let g:ale_python_mypy_options = '--ignore-missing-imports --strict'
-
 
 " FZF
 nnoremap <C-p> :Files<CR>
+
 
 " https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim
 
@@ -85,7 +65,7 @@ set encoding=utf-8
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
-" 
+"
 " Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
 " delays and poor user experience
 set updatetime=300
